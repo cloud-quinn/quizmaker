@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<title>Results</title>
+<link rel="stylesheet" href="./site.css">
+</head>
+<h2>Results</h2>
+<div class="chart"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script>
+$(document).ready(function(scores){
+
+//Stub up data for now to test chart
+var headings = ["Question 1", "Question 1", "Question 1", "Question 1", "Question 1", "Question 1"];
+var scores = [1, 4, 8, 9, 12, 15];
+var data = [];
+
+for (i = 0; i < scores.length; i++) {
+  data.push(scores[i]);
+}
+
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, 420]);
+
+d3.select(".chart")
+  .selectAll("div")
+    .text(headings)
+    .data(data)
+  .enter().append("div")    
+    .transition().style("background-color",  function(data) { 
+      if (data > 10) { 
+        return "dodgerblue";  
+      }
+      else if (data > 7) { 
+        return "orange";  
+      }
+      else { 
+        return "maroon"; 
+      } 
+    })
+    .transition().style("width", function(d) { return x(d) + "px"; })
+
+    .text(function(d) { return d; });
+});
+</script>
