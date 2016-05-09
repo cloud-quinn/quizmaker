@@ -17,9 +17,9 @@ var headings = ["Question 1", "Question 1", "Question 1", "Question 1", "Questio
 var scores = [1, 4, 8, 9, 12, 15];
 var data = [];
 
-for (i = 0; i < scores.length; i++) {
-  data.push(scores[i]);
-}
+scores.forEach (function(score) {
+    data.push(score);
+});
 
 var x = d3.scale.linear()
     .domain([0, d3.max(data)])
