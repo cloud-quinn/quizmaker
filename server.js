@@ -11,7 +11,8 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler))
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/index.html')
+  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/site.css');
 })
 
 app.listen(port, function(error) {

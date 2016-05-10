@@ -10,11 +10,11 @@ render() {
     return (
       <section className="main">
         <h4>{ question }</h4>
-                    <ul>
+            <div>
                 {answers.map(function(answer, index){
-                    return <li key={ index }>{answer}</li>;
+                    return <p><input type="radio" name="answer" value={answer} />&nbsp;<span key={ index }>{answer}</span></p>;
                   })}
-            </ul>
+            </div>
       </section>
     )
   }

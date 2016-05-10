@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Content from '../components/Content'
+import Submit from '../components/Submit'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div>
         <Header />
         <Content />
+        <Submit />
       </div>
     )
   }

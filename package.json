@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/cloud-quinn/quizmaker.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/cloud-quinn/quizmaker/blob/master/README.md"
   },
     "dependencies": {
     "babel-polyfill": "^6.3.14",

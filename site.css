@@ -1,7 +1,8 @@
-body {
+body, .main {
 	font-family: Arial;
 	color: #292929;
 	padding: 0 1em;
+	list-style: none;
 }
 
 .chart div {
