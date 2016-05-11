@@ -12,7 +12,7 @@ render() {
         <h4>{ question }</h4>
             <div>
                 {answers.map(function(answer, index){
-                    return <p><input type="radio" name="answer" value={answer} />&nbsp;<span key={ index }>{answer}</span></p>;
+                    return <p key = {index} ><input type="radio" name="answer" value={answer} />&nbsp;<span>{answer}</span></p>;
                   })}
             </div>
       </section>
