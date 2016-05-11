@@ -1,4 +1,4 @@
-body, .main {
+body {
 	font-family: Arial;
 	color: #292929;
 	padding: 0 1em;
@@ -6,13 +6,13 @@ body, .main {
 }
 
 .chart div {
-  font: 10px sans-serif;
-  background-color: white;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: white;
-  border-radius: 3px 3px;
-  width: 3px;
-  height: 13px;
+	font: 10px sans-serif;
+	background-color: white;
+	text-align: right;
+	padding: 3px;
+	margin: 1px;
+	color: white;
+	border-radius: 3px 3px;
+	width: 3px;
+	height: 13px;
 }
